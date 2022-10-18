@@ -20,6 +20,9 @@ foo = h.Section(name='bar')
 cfg, netParams = sim.readCmdLineArgs()
 sim.create(simConfig = cfg, netParams = netParams)
 
+# h -> define tau values
+sim.h.load_file('tautables.hoc')
+
 # store stims in object (otherwise will be gc if more than one)
 stims = []
 

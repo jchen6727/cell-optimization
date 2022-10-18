@@ -1,2 +1,12 @@
 
 mods_manchanda/x86_64/
+
+x86_64/.libs/
+
+x86_64/
+
+.idea/
+
+__pycache__/
+
+data/

@@ -4,7 +4,7 @@ try:
 except:
     from cfg import cfg
 
-from params import lSet, lGet
+from params import lSet, lGet, cellParams
 # NetParams object to store network parameters
 netParams = specs.NetParams()  # object of class NetParams to store the network parameters
 
@@ -16,9 +16,7 @@ params = {}
 cellType = {'model': "%s" % (lbl)}
 cellLbl = str(cellType)
 
-param = netParams.importCellParams(label=cellLbl, conds={'cellType': cellType},
-                                   fileName='soma_mm.py', cellName='createSoma',
-                                   cellArgs={}).todict()
+param = cellParams
 
 """
 All the mechanisms used in the cell
