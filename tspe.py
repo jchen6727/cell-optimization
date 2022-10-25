@@ -20,6 +20,8 @@ def batchOptuna():
     fitnessFuncArgs = {'foo': 'bar'}
 
     def fitnessEq( data ):
+
+
         t = data['t']
         v = data['v_drg']['cell_0']
         ddf = {}
