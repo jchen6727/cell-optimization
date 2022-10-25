@@ -56,20 +56,12 @@ for mech in ['hcn']:
     mechs[mech]['gbarslow'] = ng
 
 
-
-
-
-# can change cellType
-# param['conds']['cellType'] = cellType
-# cellLbl = str(cellType)
-
 # create cell population
 netParams.cellParams[cellLbl] = param
 netParams.popParams[cellLbl] = {'numCells': 1, 'cellType': cellType}
 
 # create stimulation
 netParams.stimTargetParams['ic_%s' %(cellLbl)] = {'source': 'ic_%s' %(cellLbl), 'conds': {'cellType': cellType}, 'sec': 'soma', 'loc': 0.5}
-#netParams.stimTargetParams['vc_%s' %(cellLbl)] = {'source': 'vc_%s' %(cellLbl), 'conds': {'cellType': cellType}, 'sec': 'soma', 'loc': 0.5}
 
-netParams.stimSourceParams['ic_%s' %(cellLbl)] = {'type': 'IClamp', 'amp': 0, 'delay': 0, 'dur': cfg.duration}
-#netParams.stimSourceParams['vc_%s' %(cellLbl)] = {'type': 'VClamp', 'amp': [-60, -60, -60], 'dur': [0, cfg.delay, 0]}
+
+netParams.stimSourceParams['ic_%s' %(cellLbl)] = {'type': 'IClamp', 'amp': 0.16, 'delay': 25, 'dur': 50}

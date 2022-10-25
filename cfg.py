@@ -9,11 +9,6 @@ cfg.dt = 0.025
 cfg.cvode_active = False
 cfg.recordStims = False
 cfg.recordStep = 0.05
-
-cfg.delay = 25
-cfg.isi = 1000
-cfg.amp = 0.16
-cfg.width = 50
 cfg.duration = 100
 
 mechs = cellParams['secs']['soma']['mechs']
@@ -38,8 +33,8 @@ cfg.recordCells = ['all']
 
 cfg.recordTraces["v_drg" ] = {'sec': 'soma', 'loc': 0.5, 'var': 'v'}
 
-# for label, var in [ ['NaV1.7', 'ina_nav1p7'], ['NaV1.8', 'ina_nav1p8'], ['KA', 'ik_kas'], ['KDR', 'ik_kdr'] ]:
-#     cfg.recordTraces[label] = {'sec': 'cable', 'loc': 0.25, 'var': var}
+# for label, var in [ ['NaV1.7', 'ina_nattxs'], ['NaV1.8', 'ina_nav1p8'], ['KA', 'ik_kas'], ['KDR', 'ik_kdr'] ]:
+#     cfg.recordTraces[label] = {'sec': 'cable', 'loc': 0.50, 'var': var}
 
 # Saving
 cfg.simLabel = 'sim'
