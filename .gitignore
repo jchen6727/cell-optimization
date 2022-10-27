@@ -12,3 +12,7 @@ __pycache__/
 data/
 
 nrnmech.dll
+
+.ipynb_checkpoints/sim-checkpoint.ipynb
+
+.ipynb_checkpoints/
